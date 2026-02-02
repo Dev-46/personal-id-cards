@@ -9,17 +9,20 @@
     <link rel="stylesheet" href="plan.css" />
   </head>
   <body>
-    <div id="printer">
-      <div name="info" id="information">
-        <ul>
+    <div id="printer" class="printer-big" style="background-color: black;">
+      <div  class="makebig" id="information">
+        <ul id="mylist">
           <h3 id="info-title">IFORMATION</h3>
-          <li>Esc   :    <span class="yellow">10</span></li>
-          <li>Enter: <span class="grey">10</span></li>
+          <li>Esc   :    <span class="colorsbtn yellow">10</span></li>
+          <li>Enter: <span class="colorsbtn red">10</span></li>
         </ul>
+        <div id="tools">
+          <button id="tick" class="btns">click</button>
+        </div>
       </div>
-      <div class="providers">
-        <button id="providerbtn" onclick="moveFocus(1)">Next</button>
-        <button id="providerbtn" onclick="moveFocus(-1)">previous</button>
+      <div class="providers makebig" id="tabbing">
+        <button class="btns providerbtn" id="nextBtn" onclick="moveFocus(1)"><span style='font-size:100px;'>&#8594;</span></button>
+        <button class="btns providerbtn" id="previousBtn" onclick="moveFocus(-1)"><span style='font-size:100px;'>&#8592;</span></button>
       </div>
       <div class="printers">
         <button id="printbtn" onclick="printPlan()" disabled></button>
@@ -41,6 +44,18 @@
     </div>
     <script src="plan.js"></script>
     <script>
+
+ 
+
+document.getElementById("tick").onclick =()=>{
+ document.getElementById("printer").classList.add("printer-shrink");
+   
+   
+   
+}
+
+
+
       function printPlan() {
         document.getElementById("printbtn").disabled = true;
         document.getElementById("printbtn").style.backgroundColor =
@@ -87,6 +102,8 @@
           document.getElementById("printbtn").style.transform = "scale(1.1)";
           document.getElementById("printer").style.width = "32" + "%";
         }, 10000);
+
+        
       }
 
       addEventListener("keyup", (e) => {
