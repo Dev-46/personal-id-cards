@@ -1,0 +1,503 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-weight: bold !important;
+  direction: rtl;
+  border: none;
+  outline: none;
+  max-height: 500px !important; /*570px*/
+  max-width:370px !important;
+}
+
+body {
+  background-color: rgba(0, 0, 0, 0.226);
+}
+#plan {
+  max-width: 360px;
+  min-width: 360px;
+  margin:0 auto;
+  justify-content: center;
+  align-items: center;
+}
+.sections{
+   background-color: rgb(255, 254, 254);
+}
+/*
+.sections {
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  display: flex;
+  width:360px;/* 370px */
+/*
+  background-color: rgb(255, 254, 254);
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+*/
+span {
+  font-weight: 900;
+  margin: 0;
+  margin-left: 3px;
+  margin-right: 3px;
+  text-align: right;
+  font-size: 1rem;
+}
+
+#plans {
+  min-height: fit-content !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+table {
+  width: 360px;/* 100% */
+  height: fit-content !important;
+  max-height: 400px !important;
+  border: 1px solid rgb(20, 20, 20) !important;
+}
+
+.cell1 {
+  max-width: 15px;
+
+}
+.cell2 {  /**/
+  max-width: 50px !important;
+}
+.cell3 {
+  max-width: 100px !important;/*110px*/
+  text-align: center;
+  font-size: 13px !important;/* 14*/
+  padding: 0 2px !important;
+}
+
+.cell4 {
+  max-width: 300px !important; /*280*/
+  min-width: 155px !important;
+}
+.cell1,
+.cell2,
+.cell3,
+.cell4,
+.cell5 {
+  background-color: rgb(250, 250, 250);
+  text-align: center;
+  color: rgb(16, 17, 17);
+  font-weight: bold !important;
+    font-size: 12px !important;
+}
+
+.cell5 {
+  max-width: 55px !important; /* 0% */
+  min-width: 55px !important;
+  font-size: 14px !important;
+  padding: 0 auto;
+  line-height:11px;
+}
+#printer {
+  border-right: 2px solid rgba(20, 20, 22, 0.336);
+  z-index: 100;
+  background-color: rgba(163, 184, 125, 0.842);
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 360px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  color: white;
+  font-size: 2rem;
+  animation: shrinko 9s linear ease-in-out;
+  transition: 5s ease-in-out;
+}
+
+#information {
+  position: relative;
+  left: 0;
+  right: 0;
+  line-height: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  resize: none;
+  background-color: #00000002 !important;
+  border: 2px solid rgba(255, 0, 0, 0.014);
+  font-size: 1.2rem;
+  min-width: 350px !important;
+  max-width: 350px !important;
+  width: 350px;
+  height: 150px;
+  overflow: hidden;
+  text-shadow: 1px 1px 1px #000;
+  box-shadow: 2px 5px 8px 10px rgba(0, 0, 0, 0.3);
+}
+#info-title,
+li {
+  background-color: #00000057;
+  padding: 0 1px !important;
+  width: 100% !important;
+  text-align: left;
+}
+.yellow{
+  background-color: yellow;
+  color: yellow;
+    text-shadow: 1px 1px 1px yellow;
+    width:  100px !important;
+    min-width: 100px !important;
+    height:  100px !important;
+    min-height: 100px !important;
+}
+.grey{
+  background-color: grey;
+  color: grey;
+    text-shadow: 1px 1px 1px grey;
+     width:  100px !important;
+     min-width: 100px !important;
+     height:  100px !important;
+    min-height: 100px !important;
+}
+#printer button {
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+#printer button:hover {
+  cursor: pointer;
+}
+#printer:hover {
+  animation: shrinko 5s linear ease-in-out;
+}
+#printer #provider {
+  padding: 0.5rem;
+  font-size: 0.7rem;
+}
+.providers {
+  border: 1px solid rgb(69, 82, 81);
+  margin-bottom: 22px;
+  padding: 1rem;
+  background-color: rgb(16, 36, 36);
+  display: flex;
+  justify-content: space-between;
+  align-items: left;
+  gap: 2px;
+  width: 150px !important;
+}
+#providerinput {
+  background-color: rgba(0, 0, 0, 0.267) !important;
+  font-size: 35px;
+  color: rgb(82, 119, 116);
+  width: 75px !important;
+  border: 1px solid rgb(152, 170, 125);
+  text-align: right;
+}
+#providerbtn {
+  background-color: rgba(0, 0, 0, 0.541) !important;
+  font-size: 15px;
+  color: rgb(118, 139, 139);
+  border: 1px solid rgb(152, 170, 125);
+  text-align: center;
+}
+.printers {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /*margin-left: 16px;*/
+  padding: 0.1rem;
+  background-color: rgba(0, 0, 0, 0.418);
+  width: 155px;
+  background-color: #00000002 !important;
+}
+#printbtn {
+  background-color: rgba(24, 29, 24, 0.836);
+  color: rgb(184, 211, 202);
+  border: 3px solid rgba(13, 14, 13, 0.5);
+  text-shadow: 1px 1px 1px #000;
+  box-shadow: 2px 5px 8px 10px rgba(0, 0, 0, 0.3);
+}
+#printbtn:hover {
+  cursor: pointer;
+}
+#activeprintbtn {
+  background-color: rgba(134, 153, 25, 0.541) !important;
+  font-size: 12px;
+  color: antiquewhite;
+  text-align: center;
+  border: 3px solid rgba(162, 214, 41, 0.5);
+  text-shadow: 1px 1px 1px #000;
+  /*rotate: 10deg;*/
+  box-shadow: 2px 5px 8px 10px rgba(0, 0, 0, 0.3);
+}
+#activeprintbtn:hover {
+  cursor: pointer;
+  /*rotate: 0deg;*/
+}
+
+@keyframes shrinko {
+  0% {
+    width: 27%;
+  }
+  100% {
+    width: 7%;
+  }
+}
+
+@media print {
+  #printer {
+    z-index: 0;
+    display: none;
+  }
+  #plan {
+    display: block;
+    width: 100vw;
+    border: unset;
+    filter: contrast(200%);
+  }
+
+  .cell4,
+  .cell5 {
+    background-color: rgb(255, 255, 255) !important;
+    color: rgb(16, 17, 17) !important;
+    font-weight: bold !important;
+    text-shadow: none !important;
+  }
+  td {
+    border: 1px solid black;
+  }
+  input {
+    border: 1px solid black;
+  }
+  .rows {
+    padding-top: 1px !important;
+    padding-bottom: 1px !important;
+    margin-top: 1px !important;
+    margin-bottom: 1px !important;
+  }
+}
+/* Styles for screens 768px or smaller (mobile sizes) */
+@media screen and (min-width: 768px) {
+  body{
+    display:flex;
+    margin:0 auto !important;
+    background-color: #b9b0b0;
+    max-width: 0vw !important;
+    min-width: 100vw !important;
+    width: 100vw !important;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  
+  }
+  .printers {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    display: flex;
+    width:360px !important;
+      min-width:360px !important;
+      max-width:360px !important;/* 370px */
+    background-color: rgb(255, 254, 254);
+
+  }
+  #printer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 22px auto;
+    background-color: white !important;
+    position:absolute;
+    top:0;
+    left:0;
+    right: 0;
+    bottom:0;
+    
+    width:360px !important;
+      min-width:360px !important;
+      max-width:360px !important;
+    padding:20px !important;/*new css */
+    display:flex !important;/* flex*/
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    min-height: 540px !important;
+    /*border:1px solid rgba(255, 0, 0, 0) !important;*/
+  }
+  #plan{
+    width:360px !important;
+      min-width:360px !important;
+      max-width:360px !important;
+      position:absolute;
+    top:0;
+    left:0;
+    right: 0;
+    bottom:0;
+  }
+  #information{
+    
+        display:flex !important;/*for mobiles */
+        width:360px !important;
+      min-width:360px !important;
+      max-width:360px !important;
+    border:1px solid rgb(240, 211, 211) !important;
+  }
+   .providers{
+    
+        display:flex !important;/*for mobiles */
+        width:360px !important;
+      min-width:360px !important;
+      max-width:360px !important;
+    border:5px solid rgba(222, 231, 137, 0.911) !important;
+  }
+}
+/* Styles for screens 768px or smaller (mobile sizes) */
+@media screen and (max-width: 768px) {
+  .printers {
+    flex-direction: column;
+  }
+}
+/* Styles for screens 768px or smaller (mobile sizes) */
+@media screen and (max-width: 375px) {
+  * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-weight: bold !important;
+  direction: rtl;
+  border: none;
+  outline: none;
+  max-height: 500px !important; /*570px*/
+  max-width:360px !important;
+}
+  body{
+    display:flex;
+    margin:0 auto;
+  }
+  .printers {
+    flex-direction: column;
+  }
+  tr,
+  td,
+  .cell1,
+  .cell2,
+  .cell3,
+  .cell4,
+  .cell5 {
+    background-color: rgb(250, 250, 250);
+    text-align: center;
+    color: rgb(16, 17, 17);
+    font-weight: bold !important;
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+  }
+  .rows{
+    padding:0px auto !important;
+    margin:0px auto !important;
+    
+  }
+  .cell5{
+    width:60px !important;
+    max-width:60px !important;
+    min-width:60px !important;
+    /*border:1px solid red !important;*/
+  }
+ 
+  
+  
+  #printer{
+    background-color: transparent !important;
+    position:absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    width:340px !important;
+      min-width:340px !important;
+      max-width:340px !important;
+    padding:20px !important;/*new css */
+    display:flex !important;/* flex*/
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    /*border:1px solid rgba(255, 0, 0, 0) !important;*/
+  }
+  #information{
+    
+        display:none !important;/*for mobiles */
+        width:370px !important;
+      min-width:370px !important;
+      max-width:370px !important;
+    border:1px solid rgb(240, 211, 211) !important;
+  }
+   .providers{
+    
+        display:none !important;/*for mobiles */
+        width:370px !important;
+      min-width:370px !important;
+      max-width:370px !important;
+    border:5px solid rgba(222, 231, 137, 0.911) !important;
+  }
+   .printers{
+      display:none !important;/*for mobiles */
+    background-color: rgb(155, 151, 146) !important;
+        width:370px !important;
+      min-width:370px !important;
+      max-width:370px !important;
+    border:2px solid rgb(250, 246, 246) !important;
+    border-radius: 25px;
+  }
+  #plan{
+    width:360px !important;
+      min-width:360px !important;
+      max-width:360px !important;
+  }
+  table {
+  /*width: 100%;/* 100% */
+  height: fit-content !important;
+  max-height: 400px !important;
+  border: 1px solid rgba(20, 20, 20, 0) !important;
+    margin:0 auto;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
