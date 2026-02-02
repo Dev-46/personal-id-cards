@@ -1,3 +1,5 @@
+
+
 let year = "2026";
 
 const montharabic = [
@@ -153,6 +155,8 @@ executebtn.addEventListener("click", function () {
     return year;
   }
 });
+
+
 
 //////////////////////////////////////////////////////////////////
 
@@ -1788,7 +1792,7 @@ masterInfo.style.top = "0.3" + "%";
 document.body.appendChild(masterInfo);
 
 
-
+/*
 window.addEventListener('beforeunload', function (e) {
     // إلغاء الحدث كما هو محدد في القياسات
     e.preventDefault();
@@ -1796,6 +1800,8 @@ window.addEventListener('beforeunload', function (e) {
     // بعض المتصفحات تتطلب تعيين قيمة لـ returnValue
     e.returnValue = '';
 });
+
+*/
 
 
 //   حفظ البيانات عند التغيير
@@ -1856,7 +1862,6 @@ if(BrowserDetect() ==="iPod" || BrowserDetect()==="iPhone"){
 }
 
 */
-
 
 
 
